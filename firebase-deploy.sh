@@ -1,9 +1,10 @@
 #!/bin/bash -e
 set -o pipefail
 
+node_version = node -v
+
 if [ "$TRAVIS_BRANCH" = "master" ] #&& [ "$TRAVIS_PULL_REQUEST" = "false" ]
 then
-  polymer test
   git config --global user.email "baena.francisco@gmail.com"
   git config --global user.name "travis auto deployer"
   # Stamp index.html with the date and time of PSK's deploying
