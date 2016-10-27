@@ -1,23 +1,26 @@
 # LAN Party ETSI UMA
+[![Build Status](https://travis-ci.org/ConsejoInfUMA/lan-party.svg?branch=master)](https://travis-ci.org/ConsejoInfUMA/lan-party)
 
-La página consta de cuatro secciones principales:
+Échale un ojo al proyecto y comenta tus sugerencias en el [documento de diseño](https://docs.google.com/document/d/1vfEf2kWrnQrrwf-opxeb2qPVfOqF6U2Bnf215r7HFMQ/edit). La página consta de cuatro secciones principales:
 
-- Información (landing page)
+#### Información (landing page)
   - Cuándo / Dónde / Cómo llegar
   - Restricciones: quién puede participar.
   - Redes sociales
   - Quién lo hace? -> Consejo de estudiantes
 
-- Torneos / Descripciones
+#### Torneos / Descripciones
   - Imagen + título torneo.
   - Resumen de las bases.
   - Link a las bases.
 
-- Inscripción
+#### Inscripción
   - Registro en la web
   - Inscripción a los torneos. (Por definir)
 
-Échale un ojo/pon tus sugerencias en el [documento de diseño](https://docs.google.com/document/d/1vfEf2kWrnQrrwf-opxeb2qPVfOqF6U2Bnf215r7HFMQ/edit).
+#### Contacto
+  - Info de contacto con la organización.
+
 
 ### Setup
 
