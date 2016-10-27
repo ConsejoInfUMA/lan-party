@@ -11,7 +11,7 @@ addons:
 node_js:
   - '6'
 before_script:
-  - npm install -g bower polymer-cli firebase-tools
+  - npm install -g bower polymer-cli
   - bower install
 script:
   - npm test
