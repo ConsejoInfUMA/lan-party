@@ -1,0 +1,22 @@
+{
+  "name": "lan-party",
+  "version": "1.0.0",
+  "description": "Website for UMA Lan Party",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "polymer build",
+    "test": "polymer test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConsejoInfUMA/lan-party.git"
+  },
+  "author": "ConsejoInfUMA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ConsejoInfUMA/lan-party/issues"
+  },
+  "homepage": "https://github.com/ConsejoInfUMA/lan-party#readme"
+}
