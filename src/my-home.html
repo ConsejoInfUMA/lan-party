@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-home">
@@ -18,6 +19,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
 
         padding: 10px;
+      }
+      google-map{
+        height: 300px;
       }
     </style>
 
@@ -29,7 +33,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     Se puede venir fácilmente en autobús desde el centro de la ciudad en las <a href="http://www.emtmalaga.es/emt-classic/home.html"><b>las líneas 8, 11 o 25 de la EMT</b></a>, que tienen parada en la Alameda Principal. A ella es rápido llegar desde la <a href="http://www.estabus.emtsam.es/"><b>Estación de Autobuses</b></a>, la estación de tren Málaga-María Zambrano o la estación Málaga Centro-Alameda, donde paran las <a href="http://www.renfe.com/viajeros/cercanias/malaga/"><b>líneas C-1 y C-2 de Cercanías</b></a>.<br>
 
-    También es posible venir mediante la <a href="http://metromalaga.es/"><b>línea 1 del metro de Málaga</b></a> (parada Clínico), que tiene intercambio en la estación Perchel con la Estación de tren Málaga-María Zambrano y la <a href="http://www.estabus.emtsam.es/"><b>Estación de Autobuses</b></a>.<br><br><br>
+    También es posible venir mediante la <a href="http://metromalaga.es/"><b>línea 1 del metro de Málaga</b></a> (parada Clínico), que tiene intercambio en la estación Perchel con la Estación de tren Málaga-María Zambrano y la <a href="http://www.estabus.emtsam.es/"><b>Estación de Autobuses</b></a>.
+    <google-map 
+      latitude="36.7149781" 
+      longitude="-4.4801864"
+      zoom="15">
+    </google-map>
+    <br><br><br>
     Restricciones: Todos los estudiantes de la UMA.<br>
       Redes sociales<br>
       Twitter: @ConsejoInfUMA<br>

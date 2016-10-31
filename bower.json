@@ -23,7 +23,8 @@
     "paper-menu": "PolymerElements/paper-menu#^1.2.2",
     "paper-material": "PolymerElements/paper-material#^1.0.6",
     "paper-card": "PolymerElements/paper-card#^1.1.4",
-    "paper-button": "PolymerElements/paper-button#^1.0.14"
+    "paper-button": "PolymerElements/paper-button#^1.0.14",
+    "google-map": "GoogleWebComponents/google-map#^1.1.14"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
