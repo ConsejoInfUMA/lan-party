@@ -22,22 +22,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding: 10px;
       }
     </style>
-
-    <div>
-      <h1>¡Anímate a participar!</h1>
-      <paper-input label="Nombre completo"></paper-input>
-        <paper-input label="Correo electrónico"></paper-input>
-        <paper-input label="Móvil"></paper-input>
-        <paper-input label="Nombre del equipo"></paper-input>
-        <paper-input label="Rol/Línea"></paper-input>
+      <div hidden="[[signedIn]]">
+        <paper-button raised on-tap="_fireLogin">LOGIN with Google</paper-button>
+      </div>
+      <div hidden="[[!signedIn]]">
+        <paper-button raised on-tap="_fireSignOut">LOGOUT</paper-button>
+        <paper-input label="Nombre Completo" value="[[user.displayName]]"></paper-input>
+        <paper-input label="Correo electrónico" value="[[user.email]]"></paper-input>
+        <paper-input label="Teléfono Móvil"></paper-input>
         <paper-checkbox>Confirmo que soy estudiante de la UMA, y que aportaré mi carnet de estudiante o alguna acreditación para demostrarlo el día del evento.</paper-checkbox>
         <paper-checkbox>Estoy de acuerdo en ceder estos datos al Consejo de Estudiantes, y acepto que puedan contactar conmigo a través de los datos de contacto que he proporcionado para este u otros eventos similares.</paper-checkbox>
-    </div>
+        <paper-button raised>GUARDAR</paper-button>
+      </div>
+      
   </template>
 
   <script>
     Polymer({
-      is: 'my-inscribete'
+      is: 'my-inscribete',
+      properties:{
+        user: Object
+      },
+      observers:[
+        '_userChanged(user.*)'
+      ],
+      _userChanged: function(){
+        console.log(this.user);
+      },
+      _fireLogin: function(){
+        this.fire('do-login',true);
+      },
+      _fireSignOut: function(){
+        this.fire('do-signout',true);
+      }
     });
   </script>
 </dom-module>
