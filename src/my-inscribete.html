@@ -43,12 +43,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       properties:{
         user: Object
       },
-      observers:[
-        '_userChanged(user.*)'
-      ],
-      _userChanged: function(){
-        console.log(this.user);
-      },
       _fireLogin: function(){
         this.fire('do-login',true);
       },
