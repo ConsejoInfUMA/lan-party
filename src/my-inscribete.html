@@ -9,6 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-inscribete">
@@ -23,7 +25,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <div>
       <h1>¡Anímate a participar!</h1>
-      <p>Aquí metemos el Form ahí to guay</p>
+      <paper-input label="Nombre completo"></paper-input>
+        <paper-input label="Correo electrónico"></paper-input>
+        <paper-input label="Móvil"></paper-input>
+        <paper-input label="Nombre del equipo"></paper-input>
+        <paper-input label="Rol/Línea"></paper-input>
+        <paper-checkbox>Confirmo que soy estudiante de la UMA, y que aportaré mi carnet de estudiante o alguna acreditación para demostrarlo el día del evento.</paper-checkbox>
+        <paper-checkbox>Estoy de acuerdo en ceder estos datos al Consejo de Estudiantes, y acepto que puedan contactar conmigo a través de los datos de contacto que he proporcionado para este u otros eventos similares.</paper-checkbox>
     </div>
   </template>
 
