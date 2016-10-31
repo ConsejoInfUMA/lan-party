@@ -9,6 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-torneos">
@@ -19,19 +21,44 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         padding: 10px;
       }
+
+      paper-card{
+        width: 100%;
+        margin-bottom: 10px;
+      }
     </style>
 
-    <div>
-      <h1>Torneo de League of Legends</h1>
-      <p>Aquí es donde ponemos la info del torneo de LoL</p>
-      <h1>Torneo de Hearthstone</h1>
-      <p>Lo mismo pero con el HS</p>
-    </div>
+    <template is="dom-repeat"
+    items="[[info]]">
+    <paper-card heading="[[item.title]]">
+      <div class="card-content">[[item.text]]</div>
+      <div class="card-actions">
+        <paper-button>Inscribirme</paper-button>
+      </div>
+    </paper-card>
+    </template>
+
   </template>
 
   <script>
     Polymer({
-      is: 'my-torneos'
+      is: 'my-torneos',
+      properties:{
+        info: {
+          type: Array,
+          value:  function(){
+            return [
+            {
+              title: 'Torneo de League of Legends',
+              text: 'Aquí es donde ponemos la info del torneo de LoL'
+            },
+            {
+              title: 'Torneo de Hearthstone',
+              text: 'Aquí es donde ponemos la info del torneo de HS'
+            }];
+          }
+        }
+      }
     });
   </script>
 </dom-module>
