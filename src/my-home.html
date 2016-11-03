@@ -23,22 +23,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         padding: 10px;
       }
+      a {
+        color: #4285f4
+      }
       google-map{
         height: 300px;
       }
+      .container {
+        display: flex;
+      }
+      .flexbox {
+        width: 33%
+      }
+      h2 {
+        color:#4285f4;
+      }
     </style>
 
-    <div>
-    <h4>¿Quién?</h4>Estudiantes de la UMA
-    <h4>¿Cuándo?</h4>Del 14 al 18, de 8:30 a 20:30<br>
-    <h4>¿Dónde?</h4>Aula de Hemeroteca de la ETSI de Informática, planta 3 del edificio de biblioteca de Teleco/Informática
-    <h4>¿Cómo llegar?</h4>La E.T.S. Ingeniería Informática se encuentra en el Campus de Teatinos de la Universidad de Málaga, junto al Hospital Clínico Universitario Virgen de la Victoria. Las conferencias, los talleres y las sesiones de juegos tendrán lugar en el edificio de la escuela; que cuenta con cafetería y zonas de aparcamiento. <br>
-
+    <div class = "container" style = "margin-left:10%; width:80%">
+      <div class = "flexbox"><h2>¿Quién?</h2>Estudiantes de la UMA</div>
+      <div class = "flexbox"><h2>¿Cuándo?</h2>Del 14 al 18, de 8:30 a 20:30<br></div>
+      <div class = "flexbox">  <h2>¿Dónde?</h2>Aula de Hemeroteca de la ETSI de Informática, planta 3 del edificio de biblioteca de Teleco/Informática</div>
+    </div>
+    <br>
+    <div style = "margin-left:10%; width:80%">
+      <h2>¿Cómo llegar?</h2>La E.T.S. Ingeniería Informática se encuentra en el Campus de Teatinos de la Universidad de Málaga, junto al Hospital Clínico Universitario Virgen de la Victoria. Las conferencias, los talleres y las sesiones de juegos tendrán lugar en el edificio de la escuela; que cuenta con cafetería y zonas de aparcamiento. <br>
     Se puede venir fácilmente en autobús desde el centro de la ciudad en las <a href="http://www.emtmalaga.es/emt-classic/home.html"><b>las líneas 8, 11 o 25 de la EMT</b></a>, que tienen parada en la Alameda Principal. A ella es rápido llegar desde la <a href="http://www.estabus.emtsam.es/"><b>Estación de Autobuses</b></a>, la estación de tren Málaga-María Zambrano o la estación Málaga Centro-Alameda, donde paran las <a href="http://www.renfe.com/viajeros/cercanias/malaga/"><b>líneas C-1 y C-2 de Cercanías</b></a>.<br>
 
     También es posible venir mediante la <a href="http://metromalaga.es/"><b>línea 1 del metro de Málaga</b></a> (parada Clínico), que tiene intercambio en la estación Perchel con la Estación de tren Málaga-María Zambrano y la <a href="http://www.estabus.emtsam.es/"><b>Estación de Autobuses</b></a>.
-    <google-map 
-      latitude="36.715292" 
+  </div>
+    <br>
+    <google-map
+      latitude="36.715292"
       longitude="-4.477115"
       zoom="16"
       disable-zoom>
@@ -47,10 +63,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <google-map-marker latitude="37.777" longitude="-122.38911"></google-map-marker>
     </google-map>
     <br><br><br>
+    <img src="/images/logo-consejo.jpeg" alt="Consejo de Estudiantes de la ETSI Informática">
+    <br>
     Restricciones: Todos los estudiantes de la UMA.<br>
       Redes sociales<br>
       Twitter: @ConsejoInfUMA<br>
-      <img src="/images/logo-consejo.jpeg" alt="Consejo de Estudiantes de la ETSI Informática">
     </div>
   </template>
 
