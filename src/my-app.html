@@ -24,6 +24,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="my-app">
   <template>
+    <link rel="stylesheet" href ="myStyle.css"/>
+
     <style>
       :host {
         --app-primary-color: #4285f4;
@@ -50,7 +52,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       };
     }
 
-    paper-tabs a, 
+    paper-tabs a,
     paper-tabs a:hover,
     paper-tabs a:active,
     paper-tabs a:visited,
@@ -80,7 +82,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     </style>
 
-    <firebase-app 
+    <firebase-app
       name="lan-party"
       auth-domain="lan-party-uma.firebaseapp.com"
       database-url="https://lan-party-uma.firebaseio.com"
@@ -92,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app-name="lan-party"
       user="{{user}}"
       signed-in="{{signedIn}}"
-      provider="google" 
+      provider="google"
       on-error="_authError">
     </firebase-auth>
 
@@ -127,7 +129,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </app-header>
 
     <div id="content">
-      
+
       <paper-tabs selected="[[page]]" attr-for-selected="name">
         <paper-tab link>
           <a href="/" class="link" tabindex="-1" name="home">Home</a>

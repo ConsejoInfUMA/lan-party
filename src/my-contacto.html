@@ -13,21 +13,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="my-contacto">
   <template>
+    <link rel="stylesheet" href ="myStyle.css"/>
+
     <style include="shared-styles">
       :host {
         display: block;
-
+        text-align: center;
         padding: 10px;
       }
+
     </style>
 
-    <div>
-      <h1>Nuestras redes sociales</h1>
-      <p><b>Twitter: </b><a href="https://www.twitter.com/ConsejoInfUMA"><b>@ConsejoInfUMA</b></a></p>
-      <p><b>Facebook: </b><a href="https://www.facebook.com/ConsejoInfUMA/"><b>ConsejoInfUMA</b></a></p>
-      <p><b>Gmail: </b><a href="mailto:consejoinfuma@gmail.com?Subject=LAN%20Party"><b>consejoinfuma@gmail.com</b></a></p>
-      <p><b>Twitch: </b><a href="https://www.twitch.tv/consejoinfuma"><b>ConsejoInfUMA</b></a></p>
-    </div>
+
+      <h2>Nuestras redes sociales</h2>
+        <div class = "container text" >
+          <div class = "flexbox"><b>Twitter: </b><a href="https://www.twitter.com/ConsejoInfUMA"><b>@ConsejoInfUMA</b></a></div>
+          <div class = "flexbox"><b>Facebook: </b><a href="https://www.facebook.com/ConsejoInfUMA/"><b>ConsejoInfUMA</b></a></div>
+          <div class = "flexbox"><b>Gmail: </b><a href="mailto:consejoinfuma@gmail.com?Subject=LAN%20Party"><b>consejoinfuma@gmail.com</b></a></div>
+          <div class = "flexbox"><b>Twitch: </b><a href="https://www.twitch.tv/consejoinfuma"><b>ConsejoInfUMA</b></a></div>
+        </div>
+
   </template>
 
   <script>

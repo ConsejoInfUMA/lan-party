@@ -14,6 +14,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="my-home">
   <template>
+    <link rel="stylesheet" href ="myStyle.css"/>
+
     <style include="shared-styles">
       :host {
 
@@ -23,28 +25,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         padding: 10px;
       }
-      a {
-        color: #4285f4
-      }
       google-map{
         height: 300px;
       }
-      .text {
-        margin-left:10%;
-        width:80%;
-      }
-      .container {
-        display: flex;
-      }
-      .flexbox {
-        width: 33%
-      }
-      h2 {
-        color:#4285f4;
-      }
+
     </style>
 
-    <div class = "container text  " >
+    <div class = "container text" >
       <div class = "flexbox"><h2>¿Quién?</h2>Estudiantes de la UMA</div>
       <div class = "flexbox"><h2>¿Cuándo?</h2>Del 14 al 18, de 8:30 a 20:30<br></div>
       <div class = "flexbox">  <h2>¿Dónde?</h2>Aula de Hemeroteca de la ETSI de Informática, planta 3 del edificio de biblioteca de Teleco/Informática</div>
