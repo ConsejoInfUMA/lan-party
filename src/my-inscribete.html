@@ -11,12 +11,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
-<link rel="import" href="../bower_components/google-signin/google-signin.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-inscribete">
   <template>
-    <link rel="stylesheet" href ="myStyle.css"/>
 
     <style include="shared-styles">
       :host {
@@ -26,10 +24,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
       <div hidden="[[signedIn]]" class ="text">
-        <!--<paper-button raised on-tap="_fireLogin">LOGIN with Google </paper-button> -->
-        <!--May be better using google-signin from polymer? - David  -->
-        <h2>Regístrate con Google</h2>
-        <google-signin label-signin="Sign-in" client-id="..." scopes="https://www.googleapis.com/auth/drive"></google-signin>
+        <paper-button raised on-tap="_fireLogin">LOGIN with Google </paper-button>
+        <!--May be better using google-signin from polymer? - David |
+         No: (fran) 
+         Razón: voy a utilizar firebase para la inscripcción.
+        -->
 
       </div>
       <div hidden="[[!signedIn]]">
