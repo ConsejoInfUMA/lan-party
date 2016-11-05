@@ -14,7 +14,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="my-home">
   <template>
-    <link rel="stylesheet" href ="myStyle.css"/>
 
     <style include="shared-styles">
       :host {
@@ -27,6 +26,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       google-map{
         height: 300px;
+      }
+      a {
+        color: #4285f4
+      }
+      .text {
+        margin-left:10%;
+        width:80%;
+      }
+      .container {
+        display: flex;
+      }
+      .flexbox {
+        width: 100%
+      }
+      h2 {
+        color:#4285f4;
+      }
+      @media only screen and (max-width: 1000px){
+        .container {
+          display: block;
+        }
+        .flexbox {
+          width: 100%;
+        }
       }
 
     </style>
