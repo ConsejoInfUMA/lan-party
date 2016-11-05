@@ -10,6 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/google-map/google-map.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-home">
@@ -30,38 +31,63 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       a {
         color: #4285f4
       }
-      .text {
+      .wrapper {
         margin-left:10%;
         width:80%;
       }
-      .container {
+      .card-container {
         display: flex;
+        flex-direction: row;
+        height: 160px;
       }
-      .flexbox {
-        width: 100%
+      .card {
+        color: #4285f4;
+        background-color: white;
+        width: 33%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: 20px;
+      }
+      .cta-container{
+        padding: 30px;
+      }
+      #cta{
+        --paper-button:{
+          background-color: #4285f4;
+          color:white;
+          font-size:24px;
+        };
       }
       h2 {
         color:#4285f4;
       }
-      @media only screen and (max-width: 1000px){
-        .container {
-          display: block;
+      @media only screen and (max-width: 720px){
+        .card-container {
+          margin-top:30px;
+          display: flex;
+          flex-direction: column;
+          height: auto;
         }
-        .flexbox {
+        .card {
           width: 100%;
+          height: 80px;
         }
       }
-
     </style>
 
-    <div class = "container text" >
-      <div class = "flexbox"><h2>¿Quién?</h2>Estudiantes de la UMA</div>
-      <div class = "flexbox"><h2>¿Cuándo?</h2>Del 14 al 18, de 8:30 a 20:30<br></div>
-      <div class = "flexbox">  <h2>¿Dónde?</h2>Aula de Hemeroteca de la ETSI de Informática, planta 3 del edificio de biblioteca de Teleco/Informática</div>
+    <div class = "wrapper card-container" >
+      <div class = "card">14 al 18 de Noviembre<br>8:30 a 20:30</div>
+      <div class = "card">Aula de Hemeroteca de la ETSI Informática</div>
+      <div class = "card">Para Estudiantes de la UMA</div>
     </div>
-    <br>
-    <div class="text">
-      <h2>¿Cómo llegar?</h2>La E.T.S. Ingeniería Informática se encuentra en el Campus de Teatinos de la Universidad de Málaga, junto al Hospital Clínico Universitario Virgen de la Victoria. Las conferencias, los talleres y las sesiones de juegos tendrán lugar en el edificio de la escuela; que cuenta con cafetería y zonas de aparcamiento. <br>
+    <div class="cta-container">
+      <a href="/inscribete"><paper-button id="cta">INSCRÍBETE</paper-button></a>
+    </div>
+    <div class="wrapper">
+    La E.T.S. Ingeniería Informática se encuentra en el Campus de Teatinos de la Universidad de Málaga, junto al Hospital Clínico Universitario Virgen de la Victoria. Las conferencias, los talleres y las sesiones de juegos tendrán lugar en el edificio de la escuela; que cuenta con cafetería y zonas de aparcamiento. <br>
     Se puede venir fácilmente en autobús desde el centro de la ciudad en las <a href="http://www.emtmalaga.es/emt-classic/home.html"><b>las líneas 8, 11 o 25 de la EMT</b></a>, que tienen parada en la Alameda Principal. A ella es rápido llegar desde la <a href="http://www.estabus.emtsam.es/"><b>Estación de Autobuses</b></a>, la estación de tren Málaga-María Zambrano o la estación Málaga Centro-Alameda, donde paran las <a href="http://www.renfe.com/viajeros/cercanias/malaga/"><b>líneas C-1 y C-2 de Cercanías</b></a>.<br>
 
     También es posible venir mediante la <a href="http://metromalaga.es/"><b>línea 1 del metro de Málaga</b></a> (parada Clínico), que tiene intercambio en la estación Perchel con la Estación de tren Málaga-María Zambrano y la <a href="http://www.estabus.emtsam.es/"><b>Estación de Autobuses</b></a>.
@@ -79,8 +105,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <br><br><br>
     <img src="/images/logo-consejo.jpeg" alt="Consejo de Estudiantes de la ETSI Informática">
     <br>
-    Restricciones: Todos los estudiantes de la UMA.<br>
-      Redes sociales<br>
       Twitter: @ConsejoInfUMA<br>
     </div>
   </template>
