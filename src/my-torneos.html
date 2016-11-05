@@ -11,6 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/polymerfire/polymerfire.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-torneos">
@@ -30,11 +31,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
+    <firebase-query
+      id="query"
+      app-name="lan-party"
+      path="/torneos"
+      data="{{info}}">
+    </firebase-query>
+
     <template is="dom-repeat"
     items="[[info]]">
     <paper-card heading="[[item.title]]">
       <div class="card-content">[[item.text]]</div>
       <div class="card-actions">
+        <span>Bases <a href="[[item.bases]]">aquí</a></span>
         <paper-button>Inscribirme</paper-button>
       </div>
     </paper-card>
@@ -49,18 +58,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         info: {
           type: Array,
           value:  function(){
-            return [
-            {
-              title: 'Torneo de League of Legends',
-              text: 'Como cada año en la UMA, en la LAN-Party de la ETSI de informática se celebra el Torneo de League of Legends más espectacular de la Universidad. Enfrentaos en la grieta e intendad alzaros con la victoria en este torneo que comienza el día 14 de Noviembre, ¿te lo piensas perder? Para saber cuales son las bases del Torneo pincha aquí'
-            },
-            {
-              title: 'Torneo de Hearthstone',
-              text: 'Aquí es donde ponemos la info del torneo de HS'
-            }];
+            return [];
           }
         }
-      }
+      },
     });
   </script>
 </dom-module>
