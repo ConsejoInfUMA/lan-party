@@ -26,7 +26,9 @@
     "paper-input": "PolymerElements/paper-input#^1.1.20",
     "paper-checkbox": "PolymerElements/paper-checkbox#^1.4.1",
     "polymerfire": "^0.10.2",
-    "paper-dialog": "PolymerElements/paper-dialog#^1.1.0"
+    "paper-dialog": "PolymerElements/paper-dialog#^1.1.0",
+    "paper-listbox": "polymerelements/paper-listbox#^1.1.2",
+    "paper-menu": "PolymerElements/paper-menu#^1.2.2"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

@@ -20,16 +20,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
         padding: 10px;
       }
+      @media only screen and (max-width: 720px){
+        .card-container {
+          margin-top:30px;
+          display: flex;
+          flex-direction: column;
+          height: auto;
+        }
+        .card {
+          width: 100%;
+          height: 80px;
+        }
+      }
 
     </style>
 
 
       <h2>Nuestras redes sociales</h2>
-        <div class = "container text" >
-          <div class = "flexbox"><b>Twitter: </b><a href="https://www.twitter.com/ConsejoInfUMA"><b>@ConsejoInfUMA</b></a></div>
-          <div class = "flexbox"><b>Facebook: </b><a href="https://www.facebook.com/ConsejoInfUMA/"><b>ConsejoInfUMA</b></a></div>
-          <div class = "flexbox"><b>Gmail: </b><a href="mailto:consejoinfuma@gmail.com?Subject=LAN%20Party"><b>consejoinfuma@gmail.com</b></a></div>
-          <div class = "flexbox"><b>Twitch: </b><a href="https://www.twitch.tv/consejoinfuma"><b>ConsejoInfUMA</b></a></div>
+        <div class = "wrapper card-container" >
+          <div class = "card"><img src="/images/Twitter.png" alt="https://twitter.com/consejoinfuma" height="210" width="210"></div>
+          <div class = "card"><img src="/images/Facebook.png" alt="https://www.facebook.com/ConsejoInfUMA/" height="210" width="210"></div>
+          <div class = "card"><img src="/images/Gmail.png" alt="mailto:consejoinfuma@gmail.com" height="210" width="210"></div>
+          <div class = "card"><img src="/images/Twitch.png" alt="https://www.twitch.tv/consejoinfuma" height="210" width="210"></div>
         </div>
 
   </template>
