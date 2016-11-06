@@ -16,7 +16,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="my-torneos">
   <template>
-    <link rel="stylesheet" href ="myStyle.css"/>
 
     <style include="shared-styles">
       :host {
@@ -28,6 +27,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       paper-card{
         width: 100%;
         margin-bottom: 10px;
+      }
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active {
+        text-decoration: none;
+        color:inherit;
+      }
+      paper-button{
+        color:white;
+        background: #4285f4;
       }
     </style>
 
@@ -43,7 +54,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-card heading="[[item.title]]">
       <div class="card-content">[[item.text]]</div>
       <div class="card-actions">
-        <span>Bases <a href="[[item.bases]]">aquí</a></span>
+        <a href="[[item.bases]]"><paper-button>Leer bases</paper-button></a>
+
         <a href="[[item.registration]]"><paper-button>Inscribirme</paper-button></a>
       </div>
     </paper-card>
