@@ -14,32 +14,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>my-view1</title>
+    <title>my-home</title>
 
     <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../bower_components/web-component-tester/browser.js"></script>
 
     <!-- Import the element to test -->
-    <link rel="import" href="../src/my-view1.html">
+    <link rel="import" href="../src/my-home.html">
   </head>
   <body>
     <test-fixture id="basic">
       <template>
-        <my-view1></my-view1>
+        <my-home></my-home>
       </template>
     </test-fixture>
 
     <script>
-      suite('my-view1 tests', function() {
+      suite('my-home tests', function() {
         var home;
 
         setup(function() {
           home = fixture('basic');
         });
 
-        test('Number in circle should be 1', function() {
-          var circle = Polymer.dom(home.root).querySelector('.circle');
-          assert.equal(circle.textContent, '1');
+        test('Google Map zoom should be 16', function() {
+          var gmaps = Polymer.dom(home.root).querySelector('google-map');
+          assert.equal(gmaps.zoom, '16');
         })
       });
     </script>
