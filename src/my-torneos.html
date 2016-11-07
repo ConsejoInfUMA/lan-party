@@ -40,6 +40,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color:white;
         background: #4285f4;
       }
+      a.official{
+        color:gray;
+        font-size: 20px;
+        padding-left: 20px;
+        font-style:italic;
+      }
     </style>
 
     <firebase-query
@@ -55,8 +61,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="card-content">[[item.text]]</div>
       <div class="card-actions">
         <a href="[[item.bases]]"><paper-button>Leer bases</paper-button></a>
-
         <a href="[[item.registration]]"><paper-button>Inscribirme</paper-button></a>
+        <a href="[[item.oficial]]" class ="official">Web oficial</a>
       </div>
     </paper-card>
     </template>
