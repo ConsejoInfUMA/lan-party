@@ -24,7 +24,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="my-app">
   <template>
-    <link rel="stylesheet" href ="myStyle.css"/>
 
     <style>
       :host {
@@ -60,6 +59,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       color: white;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .twitter-button{
+      text-decoration:none;
+      color:inherit;
+      text-align:center;
     }
 
     app-header {
@@ -108,13 +113,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <paper-dialog id="modal" modal>
       <div>
-        <paper-button>Compartir en Twitter</paper-button>
+          <a class ="twitter-button" href="http://ctt.ec/ce9me" ><paper-button><img src ="https://twitter.com/favicons/favicon.ico"/>&nbsp; Compartir en Twitter</paper-button></a>
       </div>
       <div class="buttons">
         <paper-button dialog-confirm autofocus>Cerrar</paper-button>
       </div>
     </paper-dialog>
-
 
     <app-header condenses reveals effects="waterfall resize-title blend-background parallax-background">
       <app-toolbar>
@@ -207,4 +211,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     });
   </script>
+
+
 </dom-module>
