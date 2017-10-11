@@ -1,20 +1,23 @@
 language: node_js
 sudo: required
 dist: trusty
+node_js: stable
 addons:
-  firefox: '46.0'
+  firefox: latest
   apt:
     sources:
-      - google-chrome
+    - google-chrome
     packages:
-      - google-chrome-stable
-node_js:
-  - '6'
-before_script:
-  - npm install -g bower polymer-cli
+    - google-chrome-stable
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+  - npm install -g bower
   - bower install
 script:
-  - npm test
+  - xvfb-run polymer test
 before_deploy:
   - npm run build
 deploy:
